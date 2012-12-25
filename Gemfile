@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.3'
 gem 'libv8', '~> 3.11.8'
 gem 'refinerycms-page-images', '~> 2.0.0'
+gem "refinerycms-news", '~> 2.0.0'
 group :development, :test do
   gem 'sqlite3'
 end
