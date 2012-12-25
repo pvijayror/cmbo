@@ -9,7 +9,11 @@
 
 <div class="row">
 <div class="span4"><%= @page.content_for(:box_one).html_safe %></div>
-<div class="span4"><%= @page.content_for(:box_two).html_safe %></div>
+<div class="span4">
+<% @items = Refinery::News::Item.latest(5) %>
+<%= render :partial => '/refinery/news/items/recent_posts' %>
+<%= @page.content_for(:box_two).html_safe %>
+</div>
 <div class="span4"><%= @page.content_for(:box_three).html_safe %></div>
 </div>
 <hr>
