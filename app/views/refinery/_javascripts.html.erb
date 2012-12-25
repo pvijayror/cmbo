@@ -9,3 +9,16 @@
 <% end %>
 <%= javascript_include_tag 'application' %>
 <%= yield :javascripts -%>
+
+<script type="text/javascript">
+$(window).load(function() {
+    $('#slider').nivoSlider({
+        effect: 'fade',
+        pauseTime: 5000,
+        directionNav:true,
+        controlNav:true
+
+    });
+});
+</script>
+
