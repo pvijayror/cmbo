@@ -1,10 +1,15 @@
 <nav id="recent_news_items">
   <h2><%= t('.recent_posts') %></h2>
-  <ul>
+
     <% @items.each do |item| %>
-      <li>
+      <p>
         <%= link_to item.title, refinery.news_item_path(item) %>
-      </li>
+        <%= truncate  item.body, :length => 150,
+                       :omission => " ... #{link_to t('.read_more'), refinery.news_item_path(item), class: 'btn btn-mini'}",
+                       :preserve_html_tags => true %>
+                       
+      <hr>
+      </p>                 
+
     <% end %>
-  </ul>
 </nav>
