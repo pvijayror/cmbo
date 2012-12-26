@@ -9,12 +9,24 @@
 
 <div class="row">
 <div class="span4"><%= @page.content_for(:box_one).html_safe %></div>
-<div class="span4">
-<% @items = Refinery::News::Item.latest(5) %>
+<div class="span4 dotted">
+<% @items = Refinery::News::Item.latest(3) %>
 <%= render :partial => '/refinery/news/items/recent_posts' %>
 
 </div>
-<div class="span4"><%= @page.content_for(:box_three).html_safe %></div>
+<div class="span4 dotted">
+
+<% @blog_posts = Refinery::Blog::Post.live.limit(3) %>
+<%= render :partial => '/refinery/blog/posts/recent_blog_posts' %>
+
 </div>
+</div>
+
 <hr>
+<div class="row">
+  <div class="span8"><%= @page.content_for(:box_two).html_safe %></div>
+  <div class="span4"><%= @page.content_for(:box_three).html_safe %></div>
+</div>
+
+
 
