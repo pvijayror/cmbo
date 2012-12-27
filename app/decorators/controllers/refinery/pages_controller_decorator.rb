@@ -1,16 +1,13 @@
 Refinery::PagesController.class_eval do
 
-  before_filter :find_all_bios, only: [:bio]
   
+  def bios
+   @bios = ::Refinery::Page.where(:parent_id => 15)
+  end
+
   def bio
-        @bios = Refinery::Page.where(view_template: :bio)
+     @bio = ::Refinery::Page.find(params[:id])
   end
   
-  
-    
-    def find_all_bios      
-      @bios = Refinery::Page.where(view_template: :bio)
-    end
-    
-    protected :find_all_bios
+
 end
