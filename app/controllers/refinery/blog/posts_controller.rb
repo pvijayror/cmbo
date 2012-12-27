@@ -7,7 +7,7 @@ module Refinery
       before_filter :find_all_blog_posts, :except => [:archive]
       before_filter :find_blog_post, :only => [:show, :comment, :update_nav]
       before_filter :find_tags
-      before_filter  :recent_posts only: [:home]
+      # before_filter  :recent_posts only: [:home]
 
       respond_to :html, :js, :rss
 
@@ -83,9 +83,9 @@ module Refinery
       
       protected
       
-      def recent_posts
-        @blog_posts = Refinery::Blog::Post.live.limit(3)
-      end
+      #def recent_posts
+      #  @blog_posts = Refinery::Blog::Post.live.limit(3)
+      #end
       
     end
   end

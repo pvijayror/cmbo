@@ -14,25 +14,16 @@
     
       <nav id='<%= dom_id %>' class='<%= css %> nav'>
         <ul class="nav">
-
-        <li class="dropdown">
-                  <a id="drop1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Dropdown<b class="caret"></b></a>
-                  <ul class="dropdown-menu" role="menu" aria-labelldby="drop1">
-                    <li><a tapindex="-1" href="#">Trayectoria</a></li>
-                    <li><a href="#">Misión, Visión, Valores</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#">Junta Directiva</a></li>
-                  </ul>
-        </li>
-
+          
 
           <%= render :partial => '/refinery/menu_branch', :collection => roots,
-                     :locals => {
+                     :locals => { 
                        :hide_children => hide_children,
                        :sibling_count => (roots.length - 1),
                        :menu_levels => local_assigns[:menu_levels],
                        :apply_css => true #if you don't care about class='first' class='last' or class='selected' set apply_css to false for speed.
                      } -%>
+                     
         </ul>
         </nav>
     </div>
