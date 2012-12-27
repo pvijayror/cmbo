@@ -5,7 +5,7 @@
   
 -%>
 <li class="dropdown">
-<% if menu_branch.children.present?%>
+<% if menu_branch.children.present? &&  menu_branch.ancestors.length < 1 %>
 <%= link_to(menu_branch.title, refinery.url_for(menu_branch.url), class: "dropdown-togle", data: { toggle: "dropdown" }) -%>
 <% else %>
 <%= link_to(menu_branch.title, refinery.url_for(menu_branch.url)) -%>
@@ -19,9 +19,8 @@
                  :locals => {
                    :apply_css => local_assigns[:apply_css],
                    :hide_children => !!hide_children,
-                   :menu_levels => local_assigns[:menu_levels],
-                   :css => "dropdown-toggle"
-                 } -%>
+                   :menu_levels => local_assigns[:menu_levels]
+                  } -%>
     
     </ul>
 </li>
