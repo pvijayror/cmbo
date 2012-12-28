@@ -1,4 +1,8 @@
 Cmbo::Application.routes.draw do
+  get "bios/index"
+
+  get "bios/show"
+
   match '/bios', :to => 'refinery/pages#bios', :as => :bios
   match '/bio/:id', :to => 'refinery/pages#bio', :as => :bio
   
