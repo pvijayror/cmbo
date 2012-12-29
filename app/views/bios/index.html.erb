@@ -1,2 +1,22 @@
-<h1>Bios#index</h1>
-<p>Find me in app/views/bios/index.html.erb</p>
+<div class="row">
+<div class="span3">
+
+
+
+
+
+</div>
+<div id="innerpagemargin" class="span8 dotted">
+
+
+<% @bios.each do |b| %>
+  <p><strong><%= link_to b.title bios_path(b) %></strong></p>
+  <%= raw @page.content_for(:body) %>
+
+  <hr>
+
+<% end %>
+
+
+</div>
+</div>

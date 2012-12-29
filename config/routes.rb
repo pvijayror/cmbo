@@ -1,10 +1,10 @@
 Cmbo::Application.routes.draw do
-  get "bios/index"
 
-  get "bios/show"
+  #match 'bios/index', :to => 'bios#index', :as => :bios
+  #match 'bio/show/:id', :to => 'bio#show', :as => :bios
 
-  match '/bios', :to => 'refinery/pages#bios', :as => :bios
-  match '/bio/:id', :to => 'refinery/pages#bio', :as => :bio
+  #match '/bios', :to => 'refinery/pages#bios', :as => :bios
+  #match '/bio/:id', :to => 'refinery/pages#bio', :as => :bio
   
   # This line mounts Refinery's routes at the root of your application.
   # This means, any requests to the root URL of your application will go to Refinery::PagesController#home.
@@ -69,4 +69,21 @@ Cmbo::Application.routes.draw do
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id))(.:format)'
+
+   resources :bios
+
+  #Refinery::Core::Engine.routes.draw do
+  #    root :to => "bios#index"
+  #    get 'bios/:id', :to => 'bios#show', :as => 'bios'
+  #    resources :bios, :only => [:show, :index], :path => ''
+  #end
+
+
+  #namespace :refinery, :path => "refinery/bios" do
+  #  resources :bios, :path => '', :only => [:index, :show]
+  #end
+
+
+
+
 end

@@ -14,7 +14,8 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
   gem 'less-rails'
   gem 'twitter-bootstrap-rails'
-  gem 'therubyracer', :require => 'v8'
+  gem 'execjs'
+  gem 'therubyracer'
   gem 'uglifier', '>= 1.0.3'
 end
 

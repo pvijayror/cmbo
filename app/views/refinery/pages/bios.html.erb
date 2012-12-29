@@ -1,33 +1,23 @@
-<%= debug @bios %>
+<%# @bios = Refinery::Page.where(:parent_id => 15) %>
+<%# @bio = ::Refinery::Page.find(params[:id]) %>
+<% @bios.each do |b| %>
 
-<div class="row">
-<div class="span3">
+   <p><strong><%= link_to b.title,  b.url  %></strong></p>
+    <%= truncate b.content_for(:body).html_safe, length: 200, :omission => "...", preserve_html_tags: true %>
+    <p>
+    <%= link_to(t('.read_more'), refinery.news_item_path(b), class: "btn btn-primary")  %>
+    </p>
+    <hr>
+
+  <% end %>
+
+
+<%= debug @bio %>
+
+<%= debug @bios %>
 
 <ul>
   <% @page.children.each do |child| %>
       <li><%= link_to child.title, child.url %></li>
   <% end %>
 </ul>
-
-<%= @page.content_for(:side_body).html_safe %></div>
-
-
-<div id="innerpagemargin" class="span8 dotted">
-<% @bios.each do |b| %>
-  <p><strong><%= link_to b.title %></strong></p>
-  <%= truncate b.content_for(:body).html_safe, length: 200, :omission => "...", preserve_html_tags: true %>
-  <p>
-  <%= link_to(t('.read_more'), bio_path(:bio), class: "btn btn-primary")  %>
-  </p>                                  
-  <hr>
-
-<% end %>
-
-
-</div>
-</div>
-
-
-
-
-
