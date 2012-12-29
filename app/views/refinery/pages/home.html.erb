@@ -8,7 +8,7 @@
 <!-- row of columns -->
 
 <div class="row">
-<div class="span4"><%= @page.content_for(:box_one).html_safe %></div>
+<div class="span4"><%= raw @page.content_for(:box_one) %></div>
 <div class="span4 dotted">
 <% @items = Refinery::News::Item.latest(3) %>
 <%= render :partial => '/refinery/news/items/recent_posts' %>
@@ -22,16 +22,16 @@
 
 <hr>
 <div class="row">
-  <div class="span8"><%= @page.content_for(:box_two).html_safe %></div>
-  <div class="span4"><%= @page.content_for(:box_three).html_safe %></div>
+  <div class="span8"><%= raw @page.content_for(:box_two) %></div>
+  <div class="span4"><%= raw @page.content_for(:box_three) %></div>
 </div>
 
 <hr>
 <div id="footer">
 <div class="row">
-  <div class="span3"><%= @page.content_for(:box_four).html_safe %></div>
-  <div class="span3"><%= @page.content_for(:box_five).html_safe %></div>
-  <div class="span3"><%= @page.content_for(:box_six).html_safe %></div>
-  <div class="span3"><%= @page.content_for(:box_seven).html_safe %></div>
+  <div class="span3"><%= raw @page.content_for(:box_four) %></div>
+  <div class="span3"><%= raw @page.content_for(:box_five) %></div>
+  <div class="span3"><%= raw @page.content_for(:box_six) %></div>
+  <div class="span3"><%= raw @page.content_for(:box_seven) %></div>
 </div>
 </div>
