@@ -1,0 +1,33 @@
+es:
+  refinery:
+    plugins:
+      directories:
+        title: Directories
+#        article: masculino/femenino
+    directories:
+      admin:
+        directories:
+          actions:
+            create_new: Crear nuevo directory
+            reorder: Reordenar directories
+            reorder_done: Reordenación de directories completada
+          records:
+            title: Directories
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay directories todavía. Pulsa en "Crear nuevo Directory" para crear tu primer directory.
+          directory:
+            view_live_html: Ver este directory como abierto al público <br/><em>(abre en ventana nueva)</em>
+            edit: Editar este directory
+            delete: Borrar este directory para siempre
+      directories:
+        show:
+          other: Otros directories
+  activerecord:
+    attributes:
+      'refinery/directories/directory':
+        image: Image
+        prefix: Prefix
+        full_name: Full Name
+        specialty: Specialty
+        schedule: Schedule
+        location: Location

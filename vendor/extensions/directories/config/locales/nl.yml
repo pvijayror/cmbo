@@ -1,0 +1,32 @@
+nl:
+  refinery:
+    plugins:
+      directories:
+        title: Directories
+    directories:
+      admin:
+        directories:
+          actions:
+            create_new: Maak een nieuwe Directory
+            reorder: Wijzig de volgorde van de Directories
+            reorder_done: Klaar met het wijzingen van de volgorde van de Directories
+          records:
+            title: Directories
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Directories. Druk op 'Maak een nieuwe Directory' om de eerste aan te maken.
+          directory:
+            view_live_html: Bekijk deze directory op de website <br/><em>(opent een nieuw venster)</em>
+            edit: Bewerk deze directory
+            delete: Verwijder deze directory voor eeuwig
+      directories:
+        show:
+          other: Andere Directories
+  activerecord:
+    attributes:
+      'refinery/directories/directory':
+        image: Image
+        prefix: Prefix
+        full_name: Full Name
+        specialty: Specialty
+        schedule: Schedule
+        location: Location

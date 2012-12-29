@@ -1,0 +1,32 @@
+nb:
+  refinery:
+    plugins:
+      directories:
+        title: Directories
+    directories:
+      admin:
+        directories:
+          actions:
+            create_new: Lag en ny Directory
+            reorder: Endre rekkefølgen på Directories
+            reorder_done: Ferdig å endre rekkefølgen Directories
+          records:
+            title: Directories
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Directories enda. Klikk på "Lag en ny Directory" for å legge til din første directory.
+          directory:
+            view_live_html: Vis hvordan denne directory ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+            edit: Rediger denne directory
+            delete: Fjern denne directory permanent
+      directories:
+        show:
+          other: Andre Directories
+  activerecord:
+    attributes:
+      'refinery/directories/directory':
+        image: Image
+        prefix: Prefix
+        full_name: Full Name
+        specialty: Specialty
+        schedule: Schedule
+        location: Location

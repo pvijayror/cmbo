@@ -1,0 +1,11 @@
+<% content_for :body do %>
+  <ul id="directories">
+    <% @directories.each do |directory| %>
+      <li>
+        <%= link_to directory.prefix, refinery.directories_directory_path(directory) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render '/refinery/content_page' %>

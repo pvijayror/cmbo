@@ -7,20 +7,33 @@
   <% end %>
 </ul>
 
-  <% Refinery::Blog::Post.all.each do |post|  %>
-      <h6 style="color:#0088CC"><%= raw post.title %></h6>
+ <%= render "/refinery/blog/shared/rss_feed" %>
+  <% if @posts.many? %>
+  <h2><%='Other Posts' %></h2>
+  <ul id="blog_posts">
+    <% @posts.each do |blog_post| %>
+      <li class='clearfix'>
+        <%= link_to blog_post.title, refinery.blog_post_path(blog_post) %>
+      </li>
     <% end %>
+  </ul>
+<% end %>
 
 <%#= raw @page.content_for(:side_body) %>
 
 </div>
 
 
+
   <div id="innerpagemargin" class="span8 dotted">
 
      <% Refinery::Blog::Post.all.each do |post|  %>
       <h2 style="color:#0088CC"><%= raw post.title %></h2>
-      <%= raw post.body %>
+      <%= raw truncate(post.body, :length => 500)  %>
+      <br>
+      <span style="float: right;"><%= link_to( 'Read more', refinery.blog_post_path(post), class: "btn btn-primary")  %> </span>
+      <br>
+      <hr>
      <% end %>
 
  </div>

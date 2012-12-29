@@ -1,0 +1,34 @@
+zh-CN:
+  refinery:
+    plugins:
+      directories:
+        title: Directories
+    directories:
+      admin:
+        directories:
+          actions:
+            create_new: 建立新的 Directory
+            reorder: 对 Directories 重新排序
+            reorder_done: 对 Directories 的重新排序结束
+          records:
+            title: Directories
+            sorry_no_results: 对不起，未找到结果。 #Sorry! There are no results found.
+
+            # There are no Directories yet. Click "Add New Directory" to add your first directory.
+            no_items_yet: 目前没有 Directories . 点击 "Add New Directory" 创建一个directory.
+          directory:
+            view_live_html: 查看 directory 的最新内容.<br/><em>(新窗口中打开)</em>
+            edit: 编辑 directory
+            delete: 永久删除 directory
+      directories:
+        show:
+          other: 其他 Directories
+  activerecord:
+    attributes:
+      'refinery/directories/directory':
+        image: Image
+        prefix: Prefix
+        full_name: Full Name
+        specialty: Specialty
+        schedule: Schedule
+        location: Location

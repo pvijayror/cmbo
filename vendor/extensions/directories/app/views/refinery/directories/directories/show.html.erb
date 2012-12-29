@@ -1,0 +1,57 @@
+<% content_for :body_content_title do %>
+  <%= @directory.prefix %>
+<% end %>
+
+<% content_for :body do %>
+  <section>
+    <h1>Image</h1>
+    <p>
+      <%= image_fu @directory.image, nil %>
+    </p>
+  </section>
+  <section>
+    <h1>Prefix</h1>
+    <p>
+      <%=raw @directory.prefix %>
+    </p>
+  </section>
+  <section>
+    <h1>Full Name</h1>
+    <p>
+      <%=raw @directory.full_name %>
+    </p>
+  </section>
+  <section>
+    <h1>Specialty</h1>
+    <p>
+      <%=raw @directory.specialty %>
+    </p>
+  </section>
+  <section>
+    <h1>Schedule</h1>
+    <p>
+      <%=raw @directory.schedule %>
+    </p>
+  </section>
+  <section>
+    <h1>Location</h1>
+    <p>
+      <%=raw @directory.location %>
+    </p>
+  </section>
+<% end %>
+
+<% content_for :side_body do %>
+  <aside>
+    <h2><%= t('.other') %></h2>
+    <ul id="directories">
+      <% @directories.each do |directory| %>
+        <li>
+          <%= link_to directory.prefix, refinery.directories_directory_path(directory) %>
+        </li>
+      <% end %>
+    </ul>
+  </aside>
+<% end %>
+
+<%= render '/refinery/content_page' %>

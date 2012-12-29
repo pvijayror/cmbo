@@ -1,0 +1,32 @@
+sk:
+  refinery:
+    plugins:
+      directories:
+        title: Directories
+    directories:
+      admin:
+        directories:
+          actions:
+            create_new: Pridať Directory
+            reorder: Preusporiadať Directories
+            reorder_done: Koniec radenia Directories
+          records:
+            title: Directories
+            sorry_no_results: Ľutujeme, ale neboli nájdené žiadne výsledky.
+            no_items_yet: Nie sú vytvorené žiadne Directories. Kliknite na "Pridať Directory" pre pridanie prvého directory.
+          directory:
+            view_live_html: Zobraziť náhľad directory<br/><em>(otvorí sa v novom okne)</em>
+            edit: Upraviť directory
+            delete: Zmazať directory
+      directories:
+        show:
+          other: Daľšie Directories
+  activerecord:
+    attributes:
+      'refinery/directories/directory':
+        image: Image
+        prefix: Prefix
+        full_name: Full Name
+        specialty: Specialty
+        schedule: Schedule
+        location: Location
