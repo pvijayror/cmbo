@@ -35,6 +35,9 @@ gem 'jquery-rails', '~> 2.0.0'
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
+group :production do
+  gem 'pg'
+end
 # Refinery CMS
 gem 'refinerycms', '~> 2.0.0'
 
