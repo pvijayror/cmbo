@@ -14,8 +14,7 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
   gem 'less-rails'
   gem 'twitter-bootstrap-rails'
-  gem 'execjs'
-  gem 'therubyracer'
+  gem 'therubyracer', :require => 'v8'
   gem 'uglifier', '>= 1.0.3'
 end
 
@@ -36,12 +35,6 @@ gem 'jquery-rails', '~> 2.0.0'
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
-
-group :production do
-  gem 'therubyracer-heroku', '0.8.1.pre3' # you will need this too
-  gem 'pg'
-end
-
 # Refinery CMS
 gem 'refinerycms', '~> 2.0.0'
 
@@ -51,5 +44,3 @@ gem 'refinerycms-blog', '~> 2.0.0'
 #  gem 'refinerycms-inquiries', '~> 2.0.0'
 #  gem 'refinerycms-search', '~> 2.0.0'
 #  gem 'refinerycms-page-images', '~> 2.0.0'
-
-gem 'refinerycms-directories', :path => 'vendor/extensions'
