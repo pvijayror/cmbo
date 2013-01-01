@@ -1,7 +1,7 @@
 
 
 
-        <% content_for :body_content_left do %>
+        <% content_for :body do %>
           <%=raw @page.content_for(Refinery::Pages.default_parts.first.to_sym) unless params[:page] %>
 
                   <% if @items.any? %>
@@ -28,13 +28,20 @@
 
 
 
-
 <% content_for :body_content_right_prepend do -%>
   <%= raw @page.content_for(::Refinery::Pages.default_parts.second.to_sym) %>
 <% end if ::Refinery::Pages.default_parts.many? -%>
+<%= render '/refinery/news/shared/body_content_right' %>
+
+<%= render "/refinery/content_page" %>
 
 
-<%= render :partial => '/refinery/news/shared/body_content_right' %>
+<style type="text/css">
+  #body{
+    float: left;
+    width: 700px;
+  .inner {
+    padding-right: 10px;
+  }
 
-<%= render :partial => "/refinery/content_page" %>
-
+</style>
