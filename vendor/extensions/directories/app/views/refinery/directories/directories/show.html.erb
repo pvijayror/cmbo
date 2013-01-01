@@ -4,9 +4,9 @@
 
 <% content_for :body do %>
   <section>
-    <h1>Image</h1>
+    <h1>Picture</h1>
     <p>
-      <%= image_fu @directory.image, nil %>
+      <%= image_fu @directory.picture, nil %>
     </p>
   </section>
   <section>
@@ -37,6 +37,12 @@
     <h1>Location</h1>
     <p>
       <%=raw @directory.location %>
+    </p>
+  </section>
+  <section>
+    <h1>Position</h1>
+    <p>
+      <%=raw @directory.position %>
     </p>
   </section>
 <% end %>

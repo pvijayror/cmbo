@@ -2,8 +2,8 @@
 <html>
    <%= render 'refinery/head' %>
   <body>
+   <%= render 'header' -%>
    <div class="container">
-        <%= render 'header' -%>
       <div class="content">
          <%= yield %>
       </div>
@@ -13,5 +13,5 @@
     <!-- JavaScripts -->
    <%= javascript_include_tag 'application' %>
    <%= yield(:javascripts) %>
-  </body>
+   </body>
 </html>

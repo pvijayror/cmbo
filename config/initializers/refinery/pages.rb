@@ -41,13 +41,21 @@ Refinery::Pages.configure do |config|
 
   # config.layout_template_whitelist = ["application"]
 
-  config.view_template_whitelist = ["home", "show", "bios", "blogs"]
+  #config.view_template_whitelist = ["home", "show", "bios", "blogs"]
 
   # config.use_layout_templates = false
 
-  config.use_view_templates = true
+  #config.use_view_templates = true
 
   # config.page_title = {:chain_page_title=>false, :ancestors=>{:separator=>" | ", :class=>"ancestors", :tag=>"span"}, :page_title=>{:class=>nil, :tag=>nil, :wrap_if_not_chained=>false}}
 
   # config.absolute_page_links = false
+
+  config.view_template_whitelist = ["home", "show", "cmbo_home", "three_col", "two_col", 'blogs', "news"]
+  config.use_view_templates = true
+
+  config.layout_template_whitelist = ["application", "cmbo_home", "three_col", "two_col", 'blogs', "news"]
+  config.use_layout_templates = true
+
+
 end

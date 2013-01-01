@@ -1,7 +1,7 @@
 module Refinery
   module Blog
     class BlogController < ::ApplicationController
-
+      layout 'blogs'
       include ControllerHelper
 
       helper :'refinery/blog/posts'

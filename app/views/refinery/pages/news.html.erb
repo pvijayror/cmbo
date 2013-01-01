@@ -1,0 +1,16 @@
+<% @bios.each do |b| %>
+
+   <p><strong><%= link_to b.title,  b.url  %></strong></p>
+    <%= truncate b.content_for(:body).html_safe, length: 200, :omission => "...", preserve_html_tags: true %>
+    <p>
+    <%= link_to(t('.read_more'), refinery.news_item_path(b), class: "btn btn-primary")  %>
+    </p>
+    <hr>
+
+  <% end %>
+
+<ul>
+  <% @page.children.each do |child| %>
+      <li><%= link_to child.title, child.url %></li>
+  <% end %>
+</ul>

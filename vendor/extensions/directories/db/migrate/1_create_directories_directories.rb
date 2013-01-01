@@ -2,12 +2,13 @@ class CreateDirectoriesDirectories < ActiveRecord::Migration
 
   def up
     create_table :refinery_directories do |t|
-      t.integer :image_id
+      t.integer :picture_id
       t.string :prefix
       t.string :full_name
       t.text :specialty
       t.text :schedule
       t.string :location
+      t.string :position
       t.integer :position
 
       t.timestamps

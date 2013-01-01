@@ -1,6 +1,7 @@
 module Refinery
   module News
     class ItemsController < ::ApplicationController
+      layout "news"
       before_filter :find_page
       before_filter :find_published_news_items, :only => [:index]
       before_filter :find_news_item, :find_latest_news_items, :only => [:show]

@@ -33,8 +33,14 @@
       <%= f.label :message %>
       <%= f.text_area :message, :rows => 6 %>
     </div>
-    <div class='field form-actions'>
-      <%= f.submit t('submit', :scope => 'refinery.blog.posts.show') %>
+    <div class='field form-actions' style="background: none; border: none;">
+      <%= f.submit t('submit', :scope => 'refinery.blog.posts.show') , :class => 'btn btn-primary' %>
     </div>
   <% end %>
 </aside>
+
+<style type="text/css">
+  input, textarea, .uneditable-input {
+    width: 337px;
+}
+</style>

@@ -24,9 +24,10 @@ fr:
   activerecord:
     attributes:
       'refinery/directories/directory':
-        image: Image
+        picture: Picture
         prefix: Prefix
         full_name: Full Name
         specialty: Specialty
         schedule: Schedule
         location: Location
+        position: Position

@@ -1,3 +1,6 @@
+<div class="row">
+<div class="span3">
+
 <% content_for :body do %>
   <ul id="directories">
     <% @directories.each do |directory| %>
@@ -8,4 +11,25 @@
   </ul>
 <% end %>
 
-<%= render '/refinery/content_page' %>
+
+ <%= render '/refinery/content_page' %>
+
+</div>
+
+<div id="innerpagemargin" class="span8 dotted">
+<% @directories.each do |directory| %>
+   <div>
+   <h2 style="font-weight: bold;"><%= link_to directory.full_name, refinery.directories_directory_path(directory) %></h2>
+   <h4 style="margin: -18px 13px 4px;"><%= link_to directory.prefix, refinery.directories_directory_path(directory) %></h4>
+    <%= raw directory.specialty  %>
+    <%= raw directory.schedule  %>
+   </div><br/><br/>
+<% end %>
+</div>
+</div>
+
+
+
+
+
+

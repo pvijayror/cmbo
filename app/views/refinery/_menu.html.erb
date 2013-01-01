@@ -1,4 +1,3 @@
-
 <%
   # Collect the root items.
   # ::Refinery::Menu is smart enough to remember all of the items in the original collection.
@@ -11,19 +10,19 @@
 <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
-    
+
       <nav id='<%= dom_id %>' class='<%= css %> nav'>
         <ul class="nav">
-          
+
 
           <%= render :partial => '/refinery/menu_branch', :collection => roots,
-                     :locals => { 
+                     :locals => {
                        :hide_children => hide_children,
                        :sibling_count => (roots.length - 1),
                        :menu_levels => local_assigns[:menu_levels],
                        :apply_css => true #if you don't care about class='first' class='last' or class='selected' set apply_css to false for speed.
                      } -%>
-                     
+
         </ul>
         </nav>
     </div>

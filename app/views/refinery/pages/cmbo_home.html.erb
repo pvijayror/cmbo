@@ -1,8 +1,8 @@
 <!-- Nivo Slider -->
 <div class="theme-default" id="slider">
-    <%# @page.images.each do |img| %>
-        <%#= image_tag img.url %>
-    <%# end%>
+    <% @page.images.each do |img| %>
+        <%= image_tag img.url %>
+    <% end%>
 </div>
 
 <!-- row of columns -->
@@ -26,12 +26,3 @@
   <div class="span4"><%= raw @page.content_for(:box_three) %></div>
 </div>
 
-<hr>
-<div id="footer">
-<div class="row">
-  <div class="span3"><%= raw @page.content_for(:box_four) %></div>
-  <div class="span3"><%= raw @page.content_for(:box_five) %></div>
-  <div class="span3"><%= raw @page.content_for(:box_six) %></div>
-  <div class="span3"><%= raw @page.content_for(:box_seven) %></div>
-</div>
-</div>
