@@ -33,7 +33,7 @@ gem 'fog' # For s3 Image uploads
 
 gem "rspec-rails", ">= 2.11.0", :group => [:development, :test]
 
-gem "bootstrap-sass", ">= 2.1.0.0"
+#gem "bootstrap-sass", ">= 2.1.0.0"
 
 group :production do
   gem 'pg'
