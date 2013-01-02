@@ -7,9 +7,9 @@
   <% end %>
 </ul>
 
-<%= raw @page.content_for(:side_body) %></div>
+<%= @page.content_for(:side_body).html_safe %></div>
 <div id="innerpagemargin" class="span8 dotted">
-<%= raw @page.content_for(:body) %>
+<%= @page.content_for(:body).html_safe %>
 </div>
 </div>
 <hr>
