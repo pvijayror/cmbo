@@ -3,24 +3,34 @@
   <% site_bar = render(:partial => '/refinery/site_bar', :locals => {:head => true}) -%>
   <%= render :partial => '/refinery/head' %>
   <body>
-    
+
 
     <%= render 'header' -%>
 
-    
+
     <div class="container">
       <div class="content">
          <%= yield %>
-    </div>  
+    </div>
     </div>
     <footer><%= render 'footer' -%></footer>
+     <%= render :partial => '/refinery/javascripts' %>
      <%= yield(:javascripts) %>
 
   </body>
 </html>
 
+<%= content_for(:stylesheets) do %>
 <style>
  footer{
      background: none;
+     padding-bottom:0;
  }
+
+ footer .row p {
+     background: #0088CC;
+     margin:0 !important;
+ }
+
 </style>
+<% end %>
