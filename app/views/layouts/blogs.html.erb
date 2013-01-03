@@ -6,7 +6,7 @@
 
 
     <%= render 'header' -%>
-
+    <%= yield(:stylesheet) %>
 
     <div class="container">
       <div class="content">
@@ -20,17 +20,6 @@
   </body>
 </html>
 
-<%= content_for(:stylesheets) do %>
-<style>
- footer{
-     background: none;
-     padding-bottom:0;
- }
+<%= content_for(:stylesheet) do %>
 
- footer .row p {
-     background: #0088CC;
-     margin:0 !important;
- }
-
-</style>
 <% end %>

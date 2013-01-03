@@ -213,3 +213,7 @@ footer p {
 #sample{
 	color: #000;
 }
+
+.blog_post header, .blog_post footer{
+    background: none;
+}
